@@ -7,8 +7,16 @@ import {App, Home, About} from '../app/app.component';
 @Component({
   selector: 'server-only-app',
   template: `
-  <footer>{{ seo }}</footer>
-  `
+  <footer class="new-color">{{ seo }}</footer>
+  `,
+  styles: [`
+    footer {
+      padding-top: 15px;
+    }
+    .new-color{
+      background-color: red;
+    }
+  `]
 })
 export class ServerOnlyApp {
   seo = 'Angular 2 Universal - server only rendered component';
